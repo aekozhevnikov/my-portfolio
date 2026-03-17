@@ -1,0 +1,1 @@
+import{b as t}from"./index-C2Jr1THZ.js";import{L as r}from"./LanguageSwitcher-DkjhNHDx.js";import"./vue-i18n-B3VPHx7D.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";const p=t(({app:o})=>{o.component("LanguageSwitcher",r)});export{p as default};
