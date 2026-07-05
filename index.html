@@ -3,32 +3,4 @@
   <link rel="modulepreload" crossorigin href="/my-portfolio/assets/QBtn-BSvBDo2Q.js">
   <link rel="modulepreload" crossorigin href="/my-portfolio/assets/prevent-scroll-DZrTP0dD.js">
   <link rel="stylesheet" crossorigin href="/my-portfolio/assets/index-DPhUhZ-8.css">
-</head><body><script>// Глобальная защита от нежелательного восстановления scrollY при закрытии
-            // модальных окон и drawer в Quasar 2.16+
-            (function() {
-                var nativeScrollTo = window.scrollTo.bind(window);
-                var allowScrollTo = true;
-
-                window.__allowScrollTo = function() { allowScrollTo = true; };
-                window.__blockScrollTo = function() { allowScrollTo = false; };
-
-                window.scrollTo = function(x, y) {
-                    if (!allowScrollTo) return;
-                    if (typeof x === 'object' && x !== null) nativeScrollTo(x);
-                    else nativeScrollTo(x, y);
-                };
-
-                // Перехватываем scrollTop на documentElement и body
-                var origScrollTopDescriptor = Object.getOwnPropertyDescriptor(
-                    Element.prototype, 'scrollTop'
-                ) || Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'scrollTop');
-
-                if (origScrollTopDescriptor && origScrollTopDescriptor.set) {
-                    var nativeScrollTopSet = origScrollTopDescriptor.set;
-                    origScrollTopDescriptor.set = function(value) {
-                        if (!allowScrollTo) return;
-                        nativeScrollTopSet.call(this, value);
-                    };
-                    Object.defineProperty(Element.prototype, 'scrollTop', origScrollTopDescriptor);
-                }
-            })();</script><div id=q-app></div></body></html>
+</head><body><div id=q-app></div></body></html>
