@@ -1,0 +1,1 @@
+import{f as e}from"./index-DntKcqHp.js";import{t}from"./LanguageSwitcher-CHLg744R.js";var n=e(({app:e})=>{e.component(`LanguageSwitcher`,t)});export{n as default};
