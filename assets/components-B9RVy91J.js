@@ -1,0 +1,1 @@
+import{F as e}from"./vendor-quasar-DW0So_g_.js";import{a as t}from"./vendor-vue-BdmccTrQ.js";var n=e(({app:e})=>{e.component(`LanguageSwitcher`,t)});export{n as default};
